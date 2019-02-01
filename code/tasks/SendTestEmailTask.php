@@ -92,7 +92,7 @@ class SendTestEmailTask extends BuildTask
         // Failed!
         else {
             echo '<div style="color:red">Failed to send email</div>';
-            echo 'Error is : ' . MandrillMailer::getInstance()->getLastError();
+            echo 'Error is : ' . implode("\n error: " , MandrillMailer::getInstance()->getLastError());
         }
     }
 }
